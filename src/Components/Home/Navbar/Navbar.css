@@ -1,0 +1,14 @@
+.text-style{
+    color: #fe2701e5;
+    font-weight: bold;
+}
+.li-color{
+    color: white;
+}
+.nav-bg{
+    background: linear-gradient(180deg, rgba(21, 0, 205, 0.842), rgb(70, 53, 177));
+}
+.nav-hover :hover{
+    background-color: black;
+    border-radius: 4px;
+}

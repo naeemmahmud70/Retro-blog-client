@@ -1,0 +1,19 @@
+.footer-area li{
+    padding-bottom: 10px;
+}
+
+.social-media .icon{
+    height: 40px;
+    width: 40px;
+    color: rgba(21, 0, 205, 0.842);
+    border-radius: 50%;
+    border: 1px solid rgba(21, 0, 205, 0.842);
+    padding: 10px;
+}
+.social-media .active-icon{
+    background-color: rgba(21, 0, 205, 0.842) ;
+    color:white;
+}
+.footer-bg{
+    background: linear-gradient(180deg, rgba(21, 0, 205, 0.842), rgb(70, 53, 177));
+}
