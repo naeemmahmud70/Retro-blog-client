@@ -1,13 +1,37 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
 
 
 const AddBlog = () => {
     const { register, handleSubmit } = useForm();
-    const onSubmit = data => console.log(data);
+    const [imageURL, setImageURL] = useState({})
+    console.log(imageURL)
 
-    const handleImageUpload=(event)=>{
-        console.log(event)
+
+    const onSubmit = data => {
+        const blogData = {
+            title: data.title,
+            description: data.description,
+            date: data.date,
+            imageURL: imageURL
+        }
+        console.log(blogData)
+        
+    };
+
+    const handleImageUpload = event => {
+        const imageData = new FormData();
+        imageData.set('key', 'c27cdbd7f672caa5d177ddecda022824')
+        imageData.append('image', event.target.files[0]);
+
+        axios.post('https://api.imgbb.com/1/upload', imageData)
+            .then(function (response) {
+                setImageURL(response.data.data.display_url);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
     }
 
     return (
@@ -20,10 +44,10 @@ const AddBlog = () => {
                         <input name="title" className="form-control" placeholder="Post title" ref={register} />
                     </div>
                     <div className="form-group w-85">
-                        <input date="title" className="form-control" placeholder="Posted date" ref={register} />
+                        <input name="date" className="form-control" placeholder="Posted date" ref={register} />
                     </div>
                     <div className="form-group w-85">
-                    <textarea description="description" id="" cols="44" rows="10" placeholder="Your post" ref={register}></textarea><br />
+                        <textarea name="description" id="" cols="44" rows="10" placeholder="Your post" ref={register}></textarea><br />
                     </div>
                     <div className="form-group w-75">
                         <input name="exampleRequired" type="file" onChange={handleImageUpload} />
