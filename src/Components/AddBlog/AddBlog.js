@@ -16,8 +16,17 @@ const AddBlog = () => {
             date: data.date,
             imageURL: imageURL
         }
+        const url = 'http://localhost:5000/addBlog'
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(blogData)
+        })
+            .then(res => console.log("server side response", res))
         console.log(blogData)
-        
+
     };
 
     const handleImageUpload = event => {

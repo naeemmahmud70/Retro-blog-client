@@ -1,0 +1,9 @@
+.image-size img{
+    width: 200px;
+}
+.div-card{
+    margin: 7px;
+    padding: 7px;
+    border-radius: 5px;
+    width: 600px;
+}

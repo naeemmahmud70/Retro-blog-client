@@ -1,0 +1,15 @@
+.newLook-img-style img{
+    width: 500px;
+    height: 500px;
+}
+.learn-btn{
+    border: 0;
+    background: linear-gradient(rgba(21, 0, 205, 0.842), rgb(70, 53, 177));
+    color: white;
+    padding: 6px 18px;
+    border-radius: 5px;
+}
+.trend-style{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 40px;
+}

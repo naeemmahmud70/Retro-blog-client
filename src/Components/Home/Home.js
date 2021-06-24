@@ -1,12 +1,14 @@
 import React from 'react';
-import Footer from './Footer/Footer';
+import Blogs from '../Blogs/Blogs';
+import SuggestedLink from '../SuggestedLink/SuggestedLink';
 import Header from './Header/Header';
 
 const Home = () => {
     return (
         <div className="">
             <Header></Header>
-            <Footer></Footer>
+            <Blogs></Blogs>
+            <SuggestedLink></SuggestedLink>
         </div>
     );
 };

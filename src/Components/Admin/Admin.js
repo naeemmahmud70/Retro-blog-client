@@ -15,7 +15,6 @@ const Admin = () => {
             <div className="col-md-6">
                 <DeleteBlog></DeleteBlog>
             </div>
-            <Footer></Footer>
         </div>
     );
 };
