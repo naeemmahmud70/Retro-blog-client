@@ -4,7 +4,6 @@ import icon from '../../images/delete-icon.jpg';
 const Delete = (props) => {
     const { title, _id } = props.blog
     const handleDelete = (id) => {
-        console.log(id)
         fetch(`http://localhost:5000/delete/${id}`, {
             method: 'DELETE'
         })

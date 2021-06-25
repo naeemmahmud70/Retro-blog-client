@@ -23,7 +23,7 @@ const Login = () => {
             history.replace(from);
         }
         else {
-            alert('invalid user')
+            alert("You aren't admin. Make sure you are admin using mail as test@test.com and password #2021dev")
         }
     }
 

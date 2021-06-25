@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <nav class="navbar navbar-expand-lg fixed-top navbar-light nav-bg">
       <div class="container-fluid">
-        <h3><img style={{ width: '30px' }} src={icon} alt="" /><span className="text-white">Retro Blog</span></h3>
+        <h3><img style={{ width: '30px' }} src={icon} alt="" /><span className="text-white">BlogNet</span></h3>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>

@@ -6,8 +6,6 @@ import { useForm } from "react-hook-form";
 const AddBlog = () => {
     const { register, handleSubmit } = useForm();
     const [imageURL, setImageURL] = useState({})
-    console.log(imageURL)
-
 
     const onSubmit = data => {
         const blogData = {
@@ -25,7 +23,6 @@ const AddBlog = () => {
             body: JSON.stringify(blogData)
         })
             .then(res => console.log("server side response", res))
-        console.log(blogData)
 
     };
 
