@@ -14,7 +14,7 @@ const AddBlog = () => {
             date: data.date,
             imageURL: imageURL
         }
-        const url = 'http://localhost:5000/addBlog'
+        const url = 'https://tranquil-crag-96287.herokuapp.com/addBlog'
         fetch(url, {
             method: 'POST',
             headers: {

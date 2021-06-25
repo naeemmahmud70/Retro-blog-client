@@ -4,7 +4,7 @@ import icon from '../../images/delete-icon.jpg';
 const Delete = (props) => {
     const { title, _id } = props.blog
     const handleDelete = (id) => {
-        fetch(`http://localhost:5000/delete/${id}`, {
+        fetch(`https://tranquil-crag-96287.herokuapp.com/delete/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

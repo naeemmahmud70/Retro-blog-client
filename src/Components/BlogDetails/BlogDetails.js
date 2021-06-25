@@ -10,14 +10,14 @@ const BlogDetails = () => {
 
     const { id } = useParams()
     useEffect(() => {
-        fetch('http://localhost:5000/blog/' + id)
+        fetch('https://tranquil-crag-96287.herokuapp.com/blog/' + id)
             .then(res => res.json())
             .then(data => setDetails(data))
 
     }, [id])
 
     useEffect(() => {
-        fetch('http://localhost:5000/blogs')
+        fetch('https://tranquil-crag-96287.herokuapp.com/blogs')
             .then(res => res.json())
             .then(data => setMoreBlog(data))
 
