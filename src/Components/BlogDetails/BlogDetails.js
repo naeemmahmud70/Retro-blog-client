@@ -24,7 +24,8 @@ const BlogDetails = () => {
     }, [])
 
     return (
-        <div className="row mt-5">
+        <div className="row mt-5 p-5">
+            
             <div className="col-md-7 right-border">
                 <div className="text-center bg-dark">
                     <img className="img-fluid" src={imageURL} alt="" />

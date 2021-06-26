@@ -14,6 +14,15 @@ const Blogs = () => {
             <div className="text-center">
                 <h2 className="text-color fw-bold trend-style">Recent Blogs</h2>
             </div>
+            {
+                blogs.length === 0 && <div className="text-center">
+                <div class="spinner-border text-success" role="status">
+                    <span class="visually-hidden"></span>
+                   
+                </div>
+                <p>...loading</p>
+                </div>
+            }
         <div className="div-flex-style">
             {
                 blogs.map(blog => <Blog blog={blog} key={blog._id}></Blog>)

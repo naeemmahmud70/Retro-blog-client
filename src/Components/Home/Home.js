@@ -1,6 +1,6 @@
 import React from 'react';
 import Blogs from '../Blogs/Blogs';
-import SuggestedLink from '../SuggestedLink/SuggestedLink';
+import PopularBlogs from '../PopularBlogs/PopularBlogs';
 import Header from './Header/Header';
 
 const Home = () => {
@@ -8,7 +8,7 @@ const Home = () => {
         <div className="">
             <Header></Header>
             <Blogs></Blogs>
-            <SuggestedLink></SuggestedLink>
+            <PopularBlogs></PopularBlogs>
         </div>
     );
 };

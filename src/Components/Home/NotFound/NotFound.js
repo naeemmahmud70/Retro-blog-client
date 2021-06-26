@@ -1,9 +1,12 @@
 import React from 'react';
+import './NotFound.css'
 
 const NotFound = () => {
     return (
-        <div>
-            <h1>page not found</h1>
+        <div className="text-center hight d-flex align-items-center justify-content-center">
+            <div>
+            <h1 className="text-danger"> Your page not found</h1>
+            </div>
         </div>
     );
 };

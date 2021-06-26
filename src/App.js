@@ -13,6 +13,8 @@ import BlogDetails from './Components/BlogDetails/BlogDetails';
 import Navbar from './Components/Home/Navbar/Navbar';
 import Footer from './Components/Home/Footer/Footer';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import About from './Components/About/About';
+import MoreNewLook from './Components/MoreNewLook/MoreNewLook';
 
 export const UserContext = createContext();
 
@@ -38,6 +40,13 @@ function App() {
 
             <Route path="/login">
               <Login></Login>
+            </Route>
+
+            <Route path="/about">
+              <About></About>
+            </Route>
+            <Route path="/moreNewLook">
+              <MoreNewLook></MoreNewLook>
             </Route>
 
             <Route exact path="/">

@@ -28,19 +28,22 @@ const Login = () => {
     }
 
     return (
-        <div className="Margin-top d-flex justify-content-center">
-            <div className="shadow p-5 bg-light field-width">
-                <form onSubmit={handleSubmit(onSubmit)}>
-                    <div className="form-group">
-                        <input name="email" className="form-control" placeholder="enter your email" ref={register} />
-                    </div>
-                    <div className="form-group">
-                        <input name="password" className="form-control" placeholder="enter your password" ref={register} />
-                    </div>
-                    <div className="text-center">
-                        <input value="Login" className="btn-style" type="submit" />
-                    </div>
-                </form>
+        <div className="hight d-flex align-items-center justify-content-center">
+            <div className="Margin-top d-flex justify-content-center">
+                <div className="shadow p-5 bg-light field-width">
+                    <h4 className="mb-4 text-color">Login Here</h4>
+                    <form onSubmit={handleSubmit(onSubmit)}>
+                        <div className="form-group">
+                            <input name="email" className="form-control" placeholder="enter your email" ref={register} />
+                        </div>
+                        <div className="form-group">
+                            <input name="password" className="form-control" placeholder="enter your password" ref={register} />
+                        </div>
+                        <div className="text-center">
+                            <input value="Login" className="btn-style" type="submit" />
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     )
