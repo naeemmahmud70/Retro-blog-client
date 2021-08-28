@@ -1,0 +1,13 @@
+.comment-section{
+    border-top: 3px solid gray;
+}
+.form-box{
+    border: 1px solid gray;
+    border-radius: 5px ;
+}
+.comment-box{
+    border: 0;
+}
+.user-img img{
+    width: 50px;
+}

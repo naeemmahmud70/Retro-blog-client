@@ -2,9 +2,9 @@ import React from 'react';
 import './PopularBlogCard.css'
 
 const PopularBlogCard = (props) => {
-    const { id, title, img, date } = props.blog;
+    const { title, img, date } = props.blog;
     return (
-        <div className="Blog-card d-flex p-3 shadow">
+        <div className="Blog-card d-flex shadow p-2">
             <div>
                 <img src={img} alt="" />
             </div>

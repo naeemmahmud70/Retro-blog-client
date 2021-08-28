@@ -17,48 +17,56 @@ import About from './Components/About/About';
 import MoreNewLook from './Components/MoreNewLook/MoreNewLook';
 
 export const UserContext = createContext();
+export const PostedContext = createContext();
+export const DeletedContext = createContext();
 
 function App() {
-  const [loggedInUser, setLoggedInUser] = useState({})
+  const [loggedInUser, setLoggedInUser] = useState({});
+  const [isPosted, setIsPosted] = useState(false);
+  const [isDeleted, setIsDeleted] = useState(false)
   return (
     <div className="">
       <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
-        <Router>
-          <Navbar></Navbar>
-          <Switch>
-            <Route path="/home">
-              <Home></Home>
-            </Route>
+        <PostedContext.Provider value={[isPosted, setIsPosted]}>
+          <DeletedContext.Provider value={[isDeleted, setIsDeleted]}>
+            <Router>
+              <Navbar></Navbar>
+              <Switch>
+                <Route path="/home">
+                  <Home></Home>
+                </Route>
 
-            <Route path="/blog/:id">
-              <BlogDetails></BlogDetails>
-            </Route>
+                <Route path="/blog/:id">
+                  <BlogDetails></BlogDetails>
+                </Route>
 
-            <PrivateRoute path="/admin">
-              <Admin></Admin>
-            </PrivateRoute >
+                <PrivateRoute path="/admin">
+                  <Admin></Admin>
+                </PrivateRoute >
 
-            <Route path="/login">
-              <Login></Login>
-            </Route>
+                <Route path="/login">
+                  <Login></Login>
+                </Route>
 
-            <Route path="/about">
-              <About></About>
-            </Route>
-            <Route path="/moreNewLook">
-              <MoreNewLook></MoreNewLook>
-            </Route>
+                <Route path="/about">
+                  <About></About>
+                </Route>
+                <Route path="/moreNewLook">
+                  <MoreNewLook></MoreNewLook>
+                </Route>
 
-            <Route exact path="/">
-              <Home></Home>
-            </Route>
+                <Route exact path="/">
+                  <Home></Home>
+                </Route>
 
-            <Route path="*">
-              <NotFound></NotFound>
-            </Route>
-          </Switch>
-          <Footer></Footer>
-        </Router>
+                <Route path="*">
+                  <NotFound></NotFound>
+                </Route>
+              </Switch>
+              <Footer></Footer>
+            </Router>
+          </DeletedContext.Provider>
+        </PostedContext.Provider>
       </UserContext.Provider>
     </div>
   );

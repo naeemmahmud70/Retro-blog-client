@@ -7,3 +7,15 @@
     border-radius: 5px;
     width: 600px;
 }
+
+@media(max-width: 320px){
+    .image-size img{
+        width: 100%;
+    }
+}
+
+@media(max-width: 320px){
+    .div-card{
+        width: 100%;
+    }
+}

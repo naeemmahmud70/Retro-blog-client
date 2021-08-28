@@ -4,7 +4,7 @@ import './MoreBlog.css'
 const MoreBlog = (props) => {
     const { title, imageURL, date } = props.blog;
     return (
-        <div className="">
+        <div className="col-md-12">
             <div className="div-card d-flex  shadow">
                 <div className="image-size mr-3">
                     <img src={imageURL} alt="" />

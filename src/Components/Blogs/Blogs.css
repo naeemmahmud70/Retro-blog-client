@@ -4,3 +4,11 @@
     justify-content: center;
     align-items: center;
 }
+
+.under-line{
+    border-bottom: 3px solid gray;
+}
+.under-line h2{
+    padding-left: 15px;
+    padding-right: 15px;
+}

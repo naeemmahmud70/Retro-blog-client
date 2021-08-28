@@ -1,14 +1,11 @@
 import React from 'react';
 import AddBlog from '../AddBlog/AddBlog';
 import DeleteBlog from '../DeleteBlog/DeleteBlog';
-import Footer from '../Home/Footer/Footer';
-import Navbar from '../Home/Navbar/Navbar';
 import "./Admin.css"
 
 const Admin = () => {
     return (
-        <div className="row mt-5">
-            <Navbar></Navbar>
+        <div className="row">
             <div className="col-md-6">
                 <AddBlog></AddBlog>
             </div>

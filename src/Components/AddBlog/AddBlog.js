@@ -1,17 +1,24 @@
 import axios from 'axios';
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { useForm } from "react-hook-form";
+import { PostedContext } from '../../App';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCloudUploadAlt } from '@fortawesome/free-solid-svg-icons';
 
 
 const AddBlog = () => {
     const { register, handleSubmit } = useForm();
-    const [imageURL, setImageURL] = useState({})
+    const [imageURL, setImageURL] = useState(null)
+
+    const [isPosted, setIsPosted] = useContext(PostedContext)
 
     const onSubmit = data => {
+        const date = new Date();
+        setIsPosted(true)
         const blogData = {
             title: data.title,
             description: data.description,
-            date: data.date,
+            date: date.toDateString(),
             imageURL: imageURL
         }
         const url = 'https://tranquil-crag-96287.herokuapp.com/addBlog'
@@ -22,7 +29,11 @@ const AddBlog = () => {
             },
             body: JSON.stringify(blogData)
         })
-            .then(res => console.log("server side response", res))
+            .then(res => {
+                if (res) {
+                    setIsPosted(false)
+                }
+            })
 
     };
 
@@ -44,21 +55,19 @@ const AddBlog = () => {
         <div className="bg-light">
             <h4 className=" text-color fw-bold mt-2 p-2">Add Blog Post</h4>
             <hr />
-            <div className="shadow p-5 bg-light">
+            <div className="shadow px-5 p-2 bg-light">
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="form-group w-85">
                         <input name="title" className="form-control" placeholder="Post title" ref={register} />
                     </div>
                     <div className="form-group w-85">
-                        <input name="date" className="form-control" placeholder="Posted date" ref={register} />
-                    </div>
-                    <div className="form-group w-85">
                         <textarea name="description" id="" cols="44" rows="10" placeholder="Your post" ref={register}></textarea><br />
                     </div>
                     <div className="form-group w-75">
-                        <input name="exampleRequired" type="file" onChange={handleImageUpload} />
+                        <label htmlFor="upload" className="image-upload-button fw-bold">Upload With Image <FontAwesomeIcon icon={faCloudUploadAlt} /></label>
+                        <input id="upload" hidden="hidden" className="form control" type="file" onChange={handleImageUpload} />
                     </div>
-                    <input value="Submit" className="btn-style" type="submit" />
+                    {imageURL ? <input value="Submit" className="btn-style" type="submit" /> : <input value="Submit" type="submit" className="disable-btn" />}
                 </form>
             </div>
         </div>

@@ -1,6 +1,23 @@
 .blog-card{
-    padding: 7px;
     margin: 7px;
     height: 520px;
     border-radius: 5px;
+}
+
+@media(min-width: 1919px){
+    .blog-card{
+        height: 615px;
+    }
+}
+
+@media(min-width: 1919px){
+    .blog-img{
+        width: 760px;
+    }
+}
+
+@media(max-width: 320px){
+    .blog-card{
+        height: 400px;
+    }
 }

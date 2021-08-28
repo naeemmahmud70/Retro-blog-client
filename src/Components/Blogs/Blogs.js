@@ -11,23 +11,27 @@ const Blogs = () => {
     }, [])
     return (
         <div id="blog">
-            <div className="text-center">
-                <h2 className="text-color fw-bold trend-style">Recent Blogs</h2>
+            <div className="d-flex justify-content-center">
+                <div className="text-center under-line">
+                    <h2 className="text-color fw-bold trend-style">Recent Blogs</h2>
+                </div>
             </div>
             {
                 blogs.length === 0 && <div className="text-center">
-                <div class="spinner-border text-success" role="status">
-                    <span class="visually-hidden"></span>
-                   
-                </div>
-                <p>...loading</p>
+                    <div class="spinner-border text-success" role="status">
+                        <span class="visually-hidden"></span>
+
+                    </div>
+                    <p>...loading</p>
                 </div>
             }
-        <div className="div-flex-style">
-            {
-                blogs.map(blog => <Blog blog={blog} key={blog._id}></Blog>)
-            }
-        </div>
+
+            <div className="row d-flex justify-content-center mt-4">
+                {
+                    blogs.map(blog => <Blog blog={blog} key={blog._id}></Blog>)
+                }
+            </div>
+
         </div>
     );
 };

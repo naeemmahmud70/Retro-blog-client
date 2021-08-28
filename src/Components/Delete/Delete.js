@@ -1,15 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { DeletedContext } from '../../App';
 import icon from '../../images/delete-icon.jpg';
 
 const Delete = (props) => {
-    const { title, _id } = props.blog
+    const { title, _id } = props.blog;
+    const [isDeleted, setIsDeleted] = useContext(DeletedContext)
+
     const handleDelete = (id) => {
+        setIsDeleted(true)
         fetch(`https://tranquil-crag-96287.herokuapp.com/delete/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
             .then(result => {
-                console.log('deleted successfully', result)
+                if (result) {
+                    setIsDeleted(false)
+                }
             })
     }
     return (

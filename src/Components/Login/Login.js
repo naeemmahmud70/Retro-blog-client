@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useHistory, useLocation } from 'react-router-dom';
 import { UserContext } from '../../App';
+import loginImg from '../../images/Data_security_27.jpg'
 import './Login.css'
 
 
@@ -28,10 +29,13 @@ const Login = () => {
     }
 
     return (
-        <div className="hight d-flex align-items-center justify-content-center">
-            <div className="Margin-top d-flex justify-content-center">
-                <div className="shadow p-5 bg-light field-width">
-                    <h4 className="mb-4 text-color">Login Here</h4>
+        <div className="row">
+            <div className="col-md-7">
+                <img className="img-fluid" src={loginImg} alt="" />
+            </div>
+            <div className="col-md-5 d-flex justify-content-center align-items-center bg-light">
+                <div className="col-md-7">
+                    <h4 className="mb-4 text-color fw-bold">Login Here</h4>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="form-group">
                             <input name="email" className="form-control" placeholder="enter your email" ref={register} />

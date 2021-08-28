@@ -3,11 +3,11 @@
     margin-left: 30px;
 }
 .text-color{
-    color:rgba(48, 0, 205, 0.856);
+    color:rgba(48, 0, 205, 0.904);
 }
 .learn-more-btn{
     border: 0;
-    background: linear-gradient(rgba(21, 0, 205, 0.842), rgb(70, 53, 177));
+    background: linear-gradient(rgba(21, 0, 205, 0.575), rgba(69, 53, 177, 0.897));
     color: white;
     border-radius: 4px;
     padding: 6px 18px;
