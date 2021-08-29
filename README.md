@@ -1,6 +1,22 @@
-#Welcome to BlogNet World.
+# BlogNet
+![alt text](./src/images/01_Home Page.jpg)
 
-Blognet is a retro blog website. Here user can see and read blog about life style. 
-Here is a admin panel. Admin have to enter required email and password for accessing admin panel. Admin can post and delete blog.
+# Features 
+- Complete web application with a dynamic blog post and admin panel.
+- User can read blog and also can comment on the blog.
+- Admin can post and delete blog as per need.
+- Custom Authentication & netlify hosting are also included. 
+- use default admin access with email test@test.com and #2021dev.
 
-Live site link: https://blognet370.netlify.app/
+# Technology
+- HTML5
+- CSS3
+- Bootstrap5
+- JavaScript
+- React 
+- Node JS
+- Express JS
+- MongoDB
+
+###  `Website Link :` [Live Site](https://blognet370.netlify.app/)
+###  `Server Repo Link :` [Github](https://github.com/naeemmahmud70/patients-care-server)
