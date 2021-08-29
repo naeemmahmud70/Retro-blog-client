@@ -1,5 +1,5 @@
 # BlogNet
-![alt text](./src/images/01_Home Page.jpg)
+![alt text](./src/images/home-page.png)
 
 # Features 
 - Complete web application with a dynamic blog post and admin panel.
